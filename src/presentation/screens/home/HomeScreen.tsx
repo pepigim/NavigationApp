@@ -4,29 +4,17 @@ import { globalStyles } from '../../theme/theme';
 import { type  NavigationProp, useNavigation, DrawerActions } from '@react-navigation/native';
 import { PrimaryButton } from '../../components/shared/PrimaryButton';
 import type { RootStackParams } from '../../routes/StackNavigator';
+import { HamburguerMenu } from '../../components/shared/HamburguerMenu';
 
-export const HomeScreen = () => {
+export const HomeScreen = () => {  
 
-  useEffect(() => {
-    navigation.setOptions({
-      headerLeft: () => (
-        <Pressable onPress={ ()=> navigation.dispatch(DrawerActions.toggleDrawer)}>
-          <Text>Menu</Text>
-        </Pressable>
-      )
-    })
-  }, [])
-  
-
-  const navigation = useNavigation<NavigationProp<RootStackParams>>();
+   const navigation = useNavigation<NavigationProp<RootStackParams>>();
 
   return (
       <View style={ globalStyles.container}>
-          {/* <Pressable 
-            onPress={ () => navigation.navigate('Products' as never)}
-            style={ globalStyles.primaryButton}>
-            <Text style={ globalStyles.buttonText}>Productos</Text>
-          </Pressable> */}
+
+          <HamburguerMenu/>
+         
           <PrimaryButton
             onPress={ () => navigation.navigate('Products') }
             label="Productos"
