@@ -48,6 +48,9 @@
     "node": ">=18"
   },
   "resolutions": {
-    "@babel/plugin-transform-modules-systemjs": "8.0.0-rc.4"
+    "@babel/plugin-transform-modules-systemjs": "8.0.0-rc.4",
+    "image-size": "^2.0.4",
+    "metro@0.80.12": "patch:metro@npm%3A0.80.12#./.yarn/patches/metro-npm-0.80.12-22fc2f7367.patch",
+    "metro@^0.80.3": "patch:metro@npm%3A0.80.12#./.yarn/patches/metro-npm-0.80.12-22fc2f7367.patch"
   }
 }
